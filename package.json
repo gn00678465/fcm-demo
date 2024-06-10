@@ -1,0 +1,13 @@
+{
+  "name": "fcm-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:dev": "pnpm --filter @fcm-demo/frontend dev --port 3010",
+    "server:dev": "pnpm --filter @fcm-demo/backend start:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
