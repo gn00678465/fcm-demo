@@ -3,7 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TokenController } from './token/token.controller';
 import { TokenService } from './token/token.service';
-import { MessageController } from './message/message.controller';
+import {
+  FCMMessageController,
+  APNMessageController,
+} from './message/message.controller';
 import { MessageService } from './message/message.service';
 import { RedisModule } from '@nestjs-modules/ioredis';
 import { HttpModule } from '@nestjs/axios';
@@ -21,7 +24,12 @@ import { HttpModule } from '@nestjs/axios';
       maxRedirects: 5,
     }),
   ],
-  controllers: [AppController, TokenController, MessageController],
+  controllers: [
+    AppController,
+    TokenController,
+    FCMMessageController,
+    APNMessageController,
+  ],
   providers: [AppService, TokenService, MessageService],
 })
 export class AppModule {}

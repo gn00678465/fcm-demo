@@ -57,4 +57,5 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # misc
 **/serviceAccount.json
+**/*.p8
 **/v8-compile-cache-0
