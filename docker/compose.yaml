@@ -1,0 +1,7 @@
+services:
+  backend:
+    container_name: fcm-backend
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile.fcm-backend
+    network_mode: "host"

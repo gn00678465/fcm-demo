@@ -1,0 +1,17 @@
+FROM node:20-alpine
+
+ENV WORKDIR=/code
+
+WORKDIR $WORKDIR
+
+RUN corepack enable
+
+ADD . .
+
+RUN pnpm install --frozen-lockfile
+
+RUN pnpm --filter @fcm-demo/backend build
+
+EXPOSE 13000
+
+CMD ["pnpm", "--filter","@fcm-demo/backend", "start" ]
